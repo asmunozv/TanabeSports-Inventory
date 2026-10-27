@@ -1,0 +1,14 @@
+server:
+  port: 8080
+spring:
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5432/tanabesports}
+    username: ${SPRING_DATASOURCE_USERNAME:tanabe}
+    password: ${SPRING_DATASOURCE_PASSWORD:tanabe_dev_password}
+  jpa:
+    hibernate:
+      ddl-auto: update # Solo para desarrollo; usar migraciones en producción
+    open-in-view: false
+  data:
+    mongodb:
+      uri: ${SPRING_DATA_MONGODB_URI:mongodb://localhost:27017/tanabesports_events}
